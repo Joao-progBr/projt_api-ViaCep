@@ -5,13 +5,10 @@
   "scripts": {
     "sass": "sass src/styles:build/styles --style=compressed",
     "watch-sass": "sass src/styles:build/styles --watch --style=compressed",
-
     "terser": "terser src/scripts/script.js -o build/scripts/main.min.js -c -m",
     "watch-js": "chokidar \"src/scripts/**/*.js\" -c \"npm run terser\"",
-
     "dev": "npm-run-all --parallel sass watch-js watch-sass",
     "build": "npm run sass && npm run terser",
-
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -20,6 +17,7 @@
   "devDependencies": {
     "chokidar-cli": "^3.0.0",
     "npm-run-all": "^4.1.5",
-    "sass": "^1.89.1"
+    "sass": "^1.89.1",
+    "terser": "^5.40.0"
   }
 }
